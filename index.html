@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бренд-Режиссура | Марина</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         :root {
-            --bg-dark: #121212;
-            --bg-light: #1E1E1E;
-            --gold: #C9A227;
-            --text: #EAEAEA;
-            --text-muted: #A0A0A0;
-            --white: #FFFFFF;
+            --apple-black: #000000;
+            --apple-white: #ffffff;
+            --apple-gray: #f5f5f7;
+            --apple-text: #1d1d1f;
+            --apple-muted: #86868b;
+            --apple-blue: #0071e3;
+            --apple-gold: #b8860b;
         }
 
         * {
@@ -23,371 +24,324 @@
         }
 
         body {
-            font-family: 'Manrope', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--apple-white);
+            color: var(--apple-text);
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        h2 {
-            font-size: 3rem;
-            margin-bottom: 40px;
-            color: var(--white);
-            position: relative;
-            display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--gold);
-            margin-top: 15px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--apple-muted);
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            font-weight: 400;
         }
 
         /* HERO */
         .hero {
-            background: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
-            padding: 150px 0 100px;
+            background: var(--apple-black);
+            color: var(--apple-white);
+            padding: 140px 0 120px;
             text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 0%, rgba(201, 162, 39, 0.1) 0%, transparent 60%);
-            pointer-events: none;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.2;
+            font-size: 5rem;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: -0.03em;
         }
 
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: var(--gold);
-            font-weight: 500;
+        .hero .tagline {
+            color: var(--apple-gold);
+            font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             margin-bottom: 30px;
+            font-weight: 600;
         }
 
         .hero p {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            font-size: 1.2rem;
-            color: var(--text-muted);
-        }
-
-        /* ABOUT */
-        .about {
-            padding: 100px 0;
-            background: var(--bg-light);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-photo {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            border: 2px solid var(--gold);
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--text);
-            font-size: 1.1rem;
-        }
-
-        .philosophy {
-            margin-top: 30px;
-            padding-left: 20px;
-            border-left: 4px solid var(--gold);
-            font-style: italic;
-            color: var(--white);
             font-size: 1.3rem;
+            color: #a1a1a6;
+            line-height: 1.7;
         }
 
-        .contacts {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gold);
-            color: #121212;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 50px;
-            transition: transform 0.3s, background 0.3s;
-            font-size: 1.1rem;
+        /* ОБО МНЕ */
+        .about {
+            background: var(--apple-white);
+            padding: 100px 0;
             text-align: center;
         }
 
-        .contact-btn:hover {
-            background: #fff;
-            transform: translateY(-3px);
+        .about h2 {
+            font-size: 3rem;
         }
 
-        .contact-btn.telegram {
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            font-size: 1.2rem;
+            color: var(--apple-muted);
+        }
+
+        .philosophy {
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--apple-gray);
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--apple-text);
+            font-weight: 500;
+        }
+
+        /* КНОПКИ КОНТАКТОВ */
+        .contact-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 980px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--apple-blue);
+            color: var(--apple-white);
+        }
+
+        .btn-primary:hover {
+            background: #0077ed;
+        }
+
+        .btn-secondary {
             background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
+            color: var(--apple-blue);
+            border: 2px solid var(--apple-blue);
         }
 
-        .contact-btn.telegram:hover {
-            background: var(--gold);
-            color: #121212;
+        .btn-secondary:hover {
+            background: var(--apple-blue);
+            color: var(--apple-white);
         }
 
-        /* PART 1 */
+        /* РАЗДЕЛ ЭТАП 1 */
         .section-part {
             padding: 100px 0;
         }
 
-        .section-part h1 {
-            font-size: 3.5rem;
-            color: var(--gold);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
         .section-part h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        .intro {
-            max-width: 800px;
-            margin-bottom: 60px;
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            border-left: 4px solid var(--gold);
-            padding-left: 20px;
+            font-size: 3rem;
         }
 
         .stage-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
+            margin-top: 60px;
         }
 
         .stage-card {
-            background: var(--bg-light);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 15px;
             padding: 40px;
+            border-radius: 18px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stage-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border-color: var(--gold);
-        }
-
-        .stage-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            font-weight: 700;
-            color: rgba(201, 162, 39, 0.1);
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            pointer-events: none;
         }
 
         .stage-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .stage-card h4 {
-            color: var(--gold);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            font-weight: 700;
         }
 
         .stage-card ul {
             list-style: none;
-            margin-top: 20px;
             margin-bottom: 20px;
         }
 
         .stage-card ul li {
-            padding-left: 25px;
+            padding-left: 20px;
             position: relative;
             margin-bottom: 10px;
-            color: var(--text-muted);
+            color: var(--apple-muted);
+            font-size: 0.95rem;
         }
 
         .stage-card ul li::before {
-            content: '◆';
+            content: '•';
             position: absolute;
             left: 0;
-            color: var(--gold);
-            font-size: 0.8rem;
-            top: 5px;
+            color: var(--apple-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .result-box {
-            margin-top: 25px;
+        .result-text {
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: var(--white);
+            border-top: 1px solid rgba(0,0,0,0.1);
             font-weight: 500;
+            font-size: 1.05rem;
         }
 
-        .result-box span {
-            color: var(--gold);
+        .result-text span {
             display: block;
-            margin-bottom: 5px;
+            color: var(--apple-blue);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: 600;
         }
 
-        /* PART 2 */
-        .section-part.alternate {
-            background: var(--bg-light);
+        /* ЭТАП 1 - СТИЛЬ */
+        .part1 {
+            background: var(--apple-white);
         }
 
-        /* RESULTS */
+        .part1 .stage-card {
+            background: var(--apple-gray);
+        }
+
+        .part1 .stage-card h3 {
+            color: var(--apple-black);
+        }
+
+        /* ЭТАП 2 - СТИЛЬ */
+        .part2 {
+            background: var(--apple-gray);
+        }
+
+        .part2 h2 {
+            color: var(--apple-black);
+        }
+
+        .part2 .stage-card {
+            background: var(--apple-white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .part2 .stage-card h3 {
+            color: var(--apple-black);
+        }
+
+        /* РЕЗУЛЬТАТЫ (НАСЛЕДИЕ) */
         .final-results {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
-            text-align: center;
+            background: var(--apple-black);
+            color: var(--apple-white);
+            padding: 120px 0;
+        }
+
+        .final-results h2 {
+            color: var(--apple-white);
+            font-size: 3.5rem;
+        }
+
+        .final-results .subtitle {
+            color: #a1a1a6;
         }
 
         .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
             margin-top: 60px;
         }
 
         .result-item {
-            padding: 40px;
-            border: 2px solid transparent;
-            border-radius: 15px;
-            background: rgba(255,255,255,0.03);
-            transition: all 0.3s;
-        }
-
-        .result-item:hover {
-            border-color: var(--gold);
-            background: rgba(201, 162, 39, 0.05);
+            padding: 30px;
+            border-radius: 18px;
+            background: #1d1d1f;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .result-item h3 {
+            color: var(--apple-white);
             font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .result-item p {
-            color: var(--text);
-            font-size: 1.1rem;
+            color: #a1a1a6;
+            font-size: 1.05rem;
         }
 
-        /* WHY ME */
+        /* ПОЧЕМУ Я */
         .why-me {
+            background: var(--apple-white);
             padding: 100px 0;
-            background: var(--bg-light);
         }
 
         .why-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
+            margin-top: 60px;
         }
 
         .why-item {
             text-align: left;
-            padding-top: 20px;
-            border-top: 2px solid var(--gold);
         }
 
         .why-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--white);
+            color: var(--apple-black);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
         .why-item p {
-            color: var(--text-muted);
+            color: var(--apple-muted);
+            font-size: 1rem;
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 50px 20px;
-            background: #0D0D0D;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 60px 20px;
+            background: var(--apple-gray);
+            color: var(--apple-muted);
         }
 
         footer a {
-            color: var(--gold);
+            color: var(--apple-blue);
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
         }
 
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 3rem; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .about-photo { max-width: 300px; margin: 0 auto; }
-            .philosophy { border-left: none; border-top: 4px solid var(--gold); padding-left: 0; padding-top: 20px; }
-            h2 { font-size: 2.2rem; }
-            .section-part h1 { font-size: 2.5rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .contact-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -396,100 +350,79 @@
     <!-- ГЛАВНЫЙ ЭКРАН -->
     <header class="hero">
         <div class="container">
-            <div class="subtitle">Система управления личным брендом</div>
-            <h1>БРЕНД-РЕЖИССУРА</h1>
-            <p>Не «раскрутка» и не «хайп». Это управление восприятием вашей личности. Построение экосистемы доверия, где ваше имя становится устойчивым якорем для нужных смыслов в головах вашей аудитории.</p>
+            <div class="tagline">Система управления личным брендом</div>
+            <h1>Бренд-Режиссура</h1>
+            <p>Не «раскрутка» и не «хайп». Это управление восприятием вашей личности. Построение экосистемы доверия, где ваше имя становится устойчивым якорем.</p>
         </div>
     </header>
 
     <!-- ОБО МНЕ -->
     <section class="about">
         <div class="container">
-            <div class="about-grid">
-                <!-- ВАЖНО: Если фото не отобразится, замените src на прямую ссылку на вашу фотографию -->
-                <img src="marina1.png" alt="Марина" class="about-photo" id="expertPhoto">
-                
-                <div class="about-text">
-                    <h3>Марина</h3>
-                    <p>Я не делаю «быстрые упаковки». Я строю экосистему доверия вокруг вас. Моя задача — не сделать вас «красивым», а сделать вас понятным, узнаваемым и востребованным в тех кругах, где это приносит результат: влияние, партнерства, проекты, доход.</p>
-                    <p>В основе моей методологии лежит работа с субличностями и 28 архетипическими ролями. Мы находим ваш уникальный «ДНК», вытаскиваем скрытые смыслы и создаем систему, которая работает на вас 24/7.</p>
-                    
-                    <div class="philosophy">
-                        «Покажи миру не то, кем ты хочешь казаться, а то, кем ты можешь быть, и это изменит всё».
-                    </div>
+            <h2>Марина</h2>
+            <p>Я не делаю «быстрые упаковки». Я строю экосистему доверия вокруг вас. Моя задача — сделать вас понятным, узнаваемым и востребованным в тех кругах, где это приносит результат: влияние, партнерства, проекты, доход.</p>
+            <p>В основе моей методологии лежит работа с субличностями и 28 архетипическими ролями. Мы находим ваш уникальный «ДНК» и создаем систему, которая работает на вас 24/7.</p>
+            
+            <div class="philosophy">
+                «Покажи миру не то, кем ты хочешь казаться, а то, кем ты можешь быть, и это изменит всё».
+            </div>
 
-                    <!-- КОНТАКТЫ -->
-                    <div class="contacts">
-                        <a href="https://t.me/more_kastinga" class="contact-btn telegram" target="_blank">Написать в Telegram</a>
-                        <a href="tel:+79265371844" class="contact-btn">Позвонить: +7 926 537-18-44</a>
-                    </div>
-                </div>
+            <div class="contact-buttons">
+                <a href="https://t.me/more_kastinga" class="btn btn-primary" target="_blank">Написать в Telegram</a>
+                <a href="tel:+79265371844" class="btn btn-secondary">Позвонить</a>
             </div>
         </div>
     </section>
 
     <!-- ЧАСТЬ 1: УПАКОВКА -->
-    <section class="section-part">
+    <section class="section-part part1">
         <div class="container">
-            <h1>Часть 1</h1>
-            <h2>УПАКОВКА: СОЗДАНИЕ ФУНДАМЕНТА</h2>
+            <h2>Часть 1. Упаковка</h2>
+            <p class="subtitle">Создание фундамента. Срок: 1–2 месяца. Формат: серия глубинных встреч + самостоятельная работа с обратной связью.</p>
             
-            <div class="intro">
-                <strong>Срок:</strong> 1–2 месяца (в зависимости от глубины запроса).<br>
-                <strong>Формат:</strong> Серия глубинных встреч + самостоятельная работа с моей обратной связью.<br><br>
-                Этот этап — «закладка фундамента» вашего бренда. Без него любые дальнейшие действия будут хаотичными и малоэффективными.
-            </div>
-
             <div class="stage-grid">
                 <!-- Этап 1 -->
                 <div class="stage-card">
-                    <div class="stage-number">01</div>
-                    <h4>Этап 1</h4>
-                    <h3>Диагностика и Аудит</h3>
+                    <h3>01. Диагностика и Аудит</h3>
                     <ul>
-                        <li>Анализ текущих целей (личных и бизнес). Отличаем истинные цели от навязанных.</li>
-                        <li>Аудит репутации (анонимный опрос 15–30 человек из окружения).</li>
-                        <li>Определение текущего уровня личного бренда (от «Вочер» до «Миссионер»).</li>
-                        <li>Анализ «онлайн-следа»: что о вас знает интернет прямо сейчас?</li>
+                        <li>Анализ целей (личных и бизнес). Отличаем истинные от навязанных.</li>
+                        <li>Аудит репутации (анонимный опрос 15–30 человек).</li>
+                        <li>Определение уровня личного бренда.</li>
+                        <li>Анализ «онлайн-следа».</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Честная картина мира. Понимание разрыва между самооценкой, репутацией и целями. Снятие иллюзий и четкая мотивация.
+                        Честная картина мира, снятие иллюзий, четкая мотивация.
                     </div>
                 </div>
 
                 <!-- Этап 2 -->
                 <div class="stage-card">
-                    <div class="stage-number">02</div>
-                    <h4>Этап 2</h4>
-                    <h3>Глубинная Распаковка (Археология Личности)</h3>
+                    <h3>02. Глубинная Распаковка</h3>
                     <ul>
-                        <li>Работа с 28 ролями (Идеальное Я, Родитель, Альтер-эго, Тень). Выявляем 5–7 ключевых ролей.</li>
+                        <li>Работа с 28 ролями и субличностями.</li>
                         <li>Создание карты «Быть. Стать. Казаться».</li>
-                        <li>Анализ биографии и «Пути Героя» как вдохновляющий сторителлинг.</li>
-                        <li>Проработка «тени». Превращаем слабые стороны в силу, делая образ живым.</li>
+                        <li>Анализ биографии и «Пути Героя».</li>
+                        <li>Проработка «тени» (слабых сторон).</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Глубокая ясность. Вы точно знаете, кто вы как бренд, и что транслируете миру. Появляется внутренняя уверенность.
+                        Глубокая ясность, внутренняя уверенность, знание своих «фишек».
                     </div>
                 </div>
 
                 <!-- Этап 3 -->
                 <div class="stage-card">
-                    <div class="stage-number">03</div>
-                    <h4>Этап 3</h4>
-                    <h3>Стратегия и Упаковка (Архитектура Бренда)</h3>
+                    <h3>03. Стратегия и Упаковка</h3>
                     <ul>
-                        <li>Позиционирование: Формулируем уникальную миссию и ответ на вопрос «Кто вы?».</li>
-                        <li>Легенда бренда: Эмоциональная история для всех коммуникаций.</li>
-                        <li>Продуктовая линейка: Воронка от лид-магнитов до премиальных предложений.</li>
-                        <li>Визуальная концепция: Мудборды, стиль, цвета под ваши архетипы.</li>
-                        <li>Медийный паспорт: Биография, легенда для СМИ, лист достижений.</li>
+                        <li>Позиционирование и уникальная миссия.</li>
+                        <li>Легенда бренда.</li>
+                        <li>Продуктовая линейка (от лид-магнитов до премиум).</li>
+                        <li>Визуальная концепция и медийный паспорт.</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Полный бренд-бук и стратегический документ. Четкая «инструкция по эксплуатации» вашего бренда.
+                        Полный бренд-бук. Четкая «инструкция по эксплуатации» бренда.
                     </div>
                 </div>
             </div>
@@ -497,102 +430,88 @@
     </section>
 
     <!-- ЧАСТЬ 2: СОПРОВОЖДЕНИЕ -->
-    <section class="section-part alternate">
+    <section class="section-part part2">
         <div class="container">
-            <h1>Часть 2</h1>
-            <h2>СОПРОВОЖДЕНИЕ: МАСШТАБИРОВАНИЕ И ПРОЯВЛЕННОСТЬ</h2>
+            <h2>Часть 2. Сопровождение</h2>
+            <p class="subtitle">Масштабирование и проявленность. Срок: 6–12 месяцев. Формат: регулярные встречи + работа с командой + стратегические сессии.</p>
             
-            <div class="intro">
-                <strong>Срок:</strong> 6–12 месяцев (гибкий тариф).<br>
-                <strong>Формат:</strong> Регулярные встречи + работа с моей командой + стратегические сессии.<br><br>
-                Этот этап — «жизнь и дыхание» вашего бренда. Мы выводим его в публичное поле, масштабируем влияние и превращаем в самостоятельный, окупаемый актив.
-            </div>
-
             <div class="stage-grid">
                 <!-- Этап 4 -->
                 <div class="stage-card">
-                    <div class="stage-number">04</div>
-                    <h4>Этап 4</h4>
-                    <h3>Контент-Режиссура и Медийная Стратегия</h3>
+                    <h3>04. Контент-Режиссура</h3>
                     <ul>
-                        <li>Разрабатываем контент-план, где каждая рубрика работает на стратегическую цель.</li>
-                        <li>Выбираем приоритетные каналы (Telegram, YouTube, СМИ) и адаптируем контент.</li>
-                        <li>Создаем медиапроекты: шоу, подкаст, авторские колонки, участие в премиях.</li>
-                        <li>Готовим к публичным выступлениям (от закрытых клубов до крупных сцен).</li>
+                        <li>Контент-план, где каждая рубрика работает на цель.</li>
+                        <li>Выбор приоритетных каналов (Telegram, YouTube, СМИ).</li>
+                        <li>Создание медиапроектов (шоу, подкаст, колонки).</li>
+                        <li>Подготовка к публичным выступлениям.</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Стабильный медийный след. Вас приглашают, о вас пишут. Бренд начинает работать «на вход».
+                        Стабильный медийный след. Вас приглашают, о вас пишут.
                     </div>
                 </div>
 
                 <!-- Этап 5 -->
                 <div class="stage-card">
-                    <div class="stage-number">05</div>
-                    <h4>Этап 5</h4>
-                    <h3>Управление Репутацией и Командой</h3>
+                    <h3>05. Управление Репутацией</h3>
                     <ul>
-                        <li>Создаем систему антикризисных коммуникаций и алгоритмы реакций.</li>
-                        <li>Формируем команду: SMM, копирайтеры, продюсеры. Определяем зоны ответственности.</li>
-                        <li>Внедряем систему отчетности (диаграмма Ганта, спринты) против выгорания.</li>
+                        <li>Система антикризисных коммуникаций.</li>
+                        <li>Формирование команды (SMM, копирайтеры, продюсеры).</li>
+                        <li>Внедрение системы отчетности и контроля.</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Команда поддерживает бренд. Вы занимаетесь только тем, что умеете лучше всего. Освобождение времени.
+                        Освобождение времени. Вы занимаетесь только тем, что умеете лучше всего.
                     </div>
                 </div>
 
                 <!-- Этап 6 -->
                 <div class="stage-card">
-                    <div class="stage-number">06</div>
-                    <h4>Этап 6</h4>
-                    <h3>Аналитика, Корректировка и Ребрендинг</h3>
+                    <h3>06. Аналитика и Ребрендинг</h3>
                     <ul>
-                        <li>Ежемесячный анализ ключевых метрик (входящие предложения, СМИ, приглашения).</li>
-                        <li>Гибкая корректировка стратегии: усиление подачи, смена ролей.</li>
-                        <li>Планирование эволюции бренда (ребрендинг) — запланированный и вынужденный.</li>
+                        <li>Ежемесячный анализ ключевых метрик.</li>
+                        <li>Гибкая корректировка стратегии.</li>
+                        <li>Планирование эволюции бренда.</li>
                     </ul>
-                    <div class="result-box">
+                    <div class="result-text">
                         <span>Результат:</span>
-                        Адаптивный бренд, который не «застаивается» и всегда актуален. Готовность к любым изменениям.
+                        Адаптивный бренд, готовый к любым изменениям рынка.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ИТОГОВЫЙ РЕЗУЛЬТАТ -->
+    <!-- ИТОГОВЫЙ РЕЗУЛЬТАТ (НАСЛЕДИЕ) -->
     <section class="final-results">
         <div class="container">
-            <h2>Что вы получаете в итоге</h2>
-            <p style="margin-bottom: 60px; color: var(--text-muted); max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.2rem;">
-                Вы не просто получаете «раскрученный аккаунт». Вы становитесь системой. Вот что это означает:
-            </p>
+            <h2>Что вы получаете</h2>
+            <p class="subtitle">Вы не просто получаете «раскрученный аккаунт». Вы становитесь системой.</p>
             
             <div class="results-grid">
                 <div class="result-item">
                     <h3>Ваше Наследие</h3>
-                    <p>Четкий ответ на вопрос «Какое наследие я оставляю?». Люди знают вас по конкретным делам и смыслам, а не по статусу.</p>
+                    <p>Четкий ответ на вопрос «Какое наследие я оставляю?». Люди знают вас по делам и смыслам.</p>
                 </div>
                 <div class="result-item">
                     <h3>Экосистема Доверия</h3>
-                    <p>Бренд становится «магнитом». Партнеры, инвесторы, клиенты и СМИ приходят к вам сами, потому что вы — центр притяжения их ценностей.</p>
+                    <p>Бренд становится «магнитом». Партнеры и инвесторы приходят сами.</p>
                 </div>
                 <div class="result-item">
-                    <h3>Статус Лидера Мнений</h3>
-                    <p>Переход на 5-й и 6-й уровни личного бренда. Ваше имя не требует представления, а мнение значимо в широких кругах.</p>
+                    <h3>Статус Лидера</h3>
+                    <p>Ваше имя не требует представления, а мнение значимо в широких кругах.</p>
                 </div>
                 <div class="result-item">
                     <h3>Масштабируемый Бизнес</h3>
-                    <p>Продуктовая линейка приносит стабильный доход. Люди идут за вами, а не за продуктом. Вы запускаете новые проекты без страха.</p>
+                    <p>Продуктовая линейка приносит доход. Люди идут за вами, а не за продуктом.</p>
                 </div>
                 <div class="result-item">
                     <h3>Свобода</h3>
-                    <p>Команда и четкая система. Вы управляете своим временем, а не оно вами. Занимаетесь творчеством и стратегией, а не рутиной.</p>
+                    <p>Команда и система. Вы управляете своим временем, а не оно вами.</p>
                 </div>
                 <div class="result-item">
                     <h3>Безопасность</h3>
-                    <p>Бренд защищен от репутационных рисков. Вы знаете слабые стороны и готовы к любым вызовам публичности.</p>
+                    <p>Бренд защищен от репутационных рисков. Вы готовы к любым вызовам.</p>
                 </div>
             </div>
         </div>
@@ -605,19 +524,19 @@
             <div class="why-grid">
                 <div class="why-item">
                     <h3>Эффект «замыленного глаза»</h3>
-                    <p>Вы находитесь внутри системы и не видите очевидных вещей. Я вижу структуру, где вы видите хаос.</p>
+                    <p>Вы внутри системы и не видите очевидных вещей. Я вижу структуру, где вы видите хаос.</p>
                 </div>
                 <div class="why-item">
                     <h3>Синдром самозванца</h3>
-                    <p>Вы склонны недооценивать свои достижения. Я помогаю увидеть сильные стороны и «достать» артефакты, которые вы не замечаете.</p>
+                    <p>Вы недооцениваете свои достижения. Я помогаю увидеть сильные стороны.</p>
                 </div>
                 <div class="why-item">
                     <h3>Отсутствие системы</h3>
-                    <p>Вы знаете, что нужно делать, но нет энергии на создание системы. Я даю готовую методологию, инструменты и поддержку.</p>
+                    <p>Вы знаете, что делать, но нет времени. Я даю готовую методологию.</p>
                 </div>
                 <div class="why-item">
                     <h3>Разница подходов</h3>
-                    <p>«Распаковщики» просто фиксируют ответы. Я — бренд-режиссер. Я строю управляемую экосистему, приводящую к долгосрочному, измеряемому и окупаемому результату.</p>
+                    <p>«Распаковщики» фиксируют ответы. Я — режиссер, который строит управляемую экосистему.</p>
                 </div>
             </div>
         </div>
@@ -625,16 +544,10 @@
 
     <footer>
         <div class="container">
-            <p>Готовы начать строить ваш бренд? <a href="https://t.me/more_kastinga" target="_blank">Свяжитесь со мной в Telegram</a></p>
+            <p>Готовы начать? <a href="https://t.me/more_kastinga" target="_blank">Свяжитесь со мной</a></p>
             <p style="margin-top: 10px; font-size: 0.9rem;">© 2026 Бренд-Режиссура. Все права защищены.</p>
         </div>
     </footer>
-
-    <!-- Скрипт для подстановки вашего фото (оставьте как есть, если хотите использовать фото с вашего сайта) -->
-    <script>
-        // Если фото не загрузится с первого сайта, вы можете просто заменить ссылку ниже на свою.
-        document.getElementById('expertPhoto').src = "https://morekastinga.github.io/chestnost/images/photo.jpg";
-    </script>
 
 </body>
 </html>
